@@ -54,3 +54,14 @@ python spec.py dflash models/qwen35-4b --draft models/qwen35-4b-dflash --k 5
 ```
 
 Each command prints a summary table and appends one row per run to `results/stats.csv`. Compare `tok_s` between `base`, `mtp` and `dflash` to see the speedup.
+
+## Live demo: guess_check_live.py
+
+```bash
+python guess_check_live.py mtp    models/qwen35-4b --k 6 --compare
+python guess_check_live.py dflash models/qwen35-4b --draft models/qwen35-4b-dflash --k 5 --compare
+# Different model, for example Qwen3.6-27B:
+# python guess_check_live.py dflash models/qwen36-27b --draft models/qwen36-27b-dflash --k 7 --compare
+```
+
+`--compare` runs normal decoding first and then MTP or DFlash in a second panel, and ends with a summary table and the speedup. The highlighted text in each panel is what the latest step produced, so you can see several tokens arrive at once with MTP and DFlash.
