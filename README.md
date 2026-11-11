@@ -13,7 +13,7 @@ MTP uses the small MTP module that ships inside the model folder. DFlash uses a 
 | | |
 |---|---|
 | Processor | Intel® Core™ Ultra Series 3 processor with integrated Intel® Arc™ GPU |
-| Memory | 62 GB |
+| Memory | 64 GB |
 | Operating system | Ubuntu 24.04 |
 | Software | OpenVINO™ GenAI 2026.4.1, Python 3.12 |
 
