@@ -54,15 +54,3 @@ python spec.py dflash models/qwen35-4b --draft models/qwen35-4b-dflash --k 5
 ```
 
 Each command prints a summary table and appends one row per run to `results/stats.csv`. Compare `tok_s` between `base`, `mtp` and `dflash` to see the speedup.
-
-## Folder layout
-
-```
-OpenVINO-MTP_DFlash/
-├── spec.py               # benchmark: normal decoding, MTP or DFlash
-├── guess_check_live.py   # live terminal demo, side by side
-├── download_models.sh    # downloads models into models/
-├── requirements.txt
-├── models/               # model folders, created by download_models.sh
-└── results/              # stats.csv and generated text, created by spec.py
-```
